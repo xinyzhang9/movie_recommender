@@ -27,7 +27,6 @@ function createSuggestionStream(closeClickStream) {
     return closeClickStream.startWith('startup click')
         .combineLatest(responseStream,             
             function(click, listMovies) {
-                console.log(listMovies['results']);
                 return listMovies['results'][Math.floor(Math.random()*20)];
             }
         )

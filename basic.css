@@ -36,6 +36,7 @@ h2 {
 .header {
     background: #fffcf4;
     padding: 5px;
+    text-align: center;
 }
 .suggestions {
     border: 2px solid #ECECEC;
@@ -81,6 +82,9 @@ li .vote_average {
     bottom: 90px;
     left: 100px;
     color: orange;
+}
+p{
+    text-align: center;
 }
 
 
