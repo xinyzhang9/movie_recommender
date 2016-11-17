@@ -57,10 +57,15 @@ function renderSuggestion(suggestedUser, selector) {
         var imgEl = suggestionEl.querySelector('img');
         imgEl.src = "";
         imgEl.src = 'http://image.tmdb.org/t/p/w500'+ suggestedUser.poster_path;
+
         var overviewEl = suggestionEl.querySelector('.overview');
         overviewEl.textContent = suggestedUser.overview;
+
         var releaseEL = suggestionEl.querySelector('.release_date');
         releaseEL.textContent = suggestedUser.release_date;
+
+        var voteEL = suggestionEl.querySelector('.vote_average');
+        voteEL.textContent = suggestedUser.vote_average+'/10';
     }
 }
 

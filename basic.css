@@ -1,5 +1,26 @@
+@font-face {
+font-family: 'myFont';
+src: url("SourceSansPro-ExtraLight.otf");
+}
+
+@font-face {
+font-family: 'myFont';
+font-weight: bold;
+src: url("SourceSansPro-Semibold.otf");
+}
+
+a{
+    text-decoration:none;
+}
+a:link {
+    color: green;
+}
+a:hover {
+    color: hotpink;
+}
+
 body {
-    font-family: sans-serif;
+    font-family: 'myFont';
     padding: 10px;
 }
 h2 {
@@ -7,11 +28,13 @@ h2 {
     display: inline-block;
 }
 .refresh {
-    font-size: 80%;
     margin-left: 10px;
+    color: green; 
+    font-family: bolder;
+    font-size: 120%;
 }
 .header {
-    background: #ECECEC;
+    background: #fffcf4;
     padding: 5px;
 }
 .suggestions {
@@ -24,6 +47,8 @@ ul{
 li {
     padding: 5px;
     margin: 5px;
+    border: 1px solid gray;
+    box-shadow: 5px 5px 5px gray;
 }
 li img {
     width: 80px;
@@ -32,14 +57,30 @@ li img {
     padding: 2px;
     display: inline-block;
 }
-li .username, li .close {
+li .username {
     display: inline-block;
     position: relative;
     bottom: 100px;
+    font-weight: bolder;
+}
+li .close {
+    display: inline-block;
+    position: relative;
+    bottom: 100px;
+    left: 10px;
+    font-weight: bolder;
 }
 li .release_date {
     position: relative;
     bottom: 90px;
     left: 90px;
+    color:steelblue;
 }
+li .vote_average {
+    position: relative;
+    bottom: 90px;
+    left: 100px;
+    color: orange;
+}
+
 
