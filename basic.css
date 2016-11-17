@@ -1,0 +1,45 @@
+body {
+    font-family: sans-serif;
+    padding: 10px;
+}
+h2 {
+    font-weight: bold;
+    display: inline-block;
+}
+.refresh {
+    font-size: 80%;
+    margin-left: 10px;
+}
+.header {
+    background: #ECECEC;
+    padding: 5px;
+}
+.suggestions {
+    border: 2px solid #ECECEC;
+}
+ul{
+    list-style-type:none;
+    padding-left: 0px;
+}
+li {
+    padding: 5px;
+    margin: 5px;
+}
+li img {
+    width: 80px;
+    border-radius: 5px;
+    border: 1px solid brown;
+    padding: 2px;
+    display: inline-block;
+}
+li .username, li .close {
+    display: inline-block;
+    position: relative;
+    bottom: 100px;
+}
+li .release_date {
+    position: relative;
+    bottom: 90px;
+    left: 90px;
+}
+
