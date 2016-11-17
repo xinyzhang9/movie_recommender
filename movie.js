@@ -26,9 +26,9 @@ var responseStream = requestStream
 function createSuggestionStream(closeClickStream) {
     return closeClickStream.startWith('startup click')
         .combineLatest(responseStream,             
-            function(click, listUsers) {
-                console.log(listUsers['results']);
-                return listUsers['results'][Math.floor(Math.random()*20)];
+            function(click, listMovies) {
+                console.log(listMovies['results']);
+                return listMovies['results'][Math.floor(Math.random()*20)];
             }
         )
         .merge(
@@ -45,38 +45,38 @@ var suggestion3Stream = createSuggestionStream(close3ClickStream);
 
 
 // Rendering ---------------------------------------------------
-function renderSuggestion(suggestedUser, selector) {
+function renderSuggestion(suggestedMovie, selector) {
     var suggestionEl = document.querySelector(selector);
-    if (suggestedUser === null) {
+    if (suggestedMovie === null) {
         suggestionEl.style.visibility = 'hidden';
     } else {
         suggestionEl.style.visibility = 'visible';
-        var usernameEl = suggestionEl.querySelector('.username');
-        usernameEl.href = 'https://www.themoviedb.org/movie/'+suggestedUser.id;
-        usernameEl.textContent = suggestedUser.title;
+        var movienameEl = suggestionEl.querySelector('.moviename');
+        movienameEl.href = 'https://www.themoviedb.org/movie/'+suggestedMovie.id;
+        movienameEl.textContent = suggestedMovie.title;
         var imgEl = suggestionEl.querySelector('img');
         imgEl.src = "";
-        imgEl.src = 'https://image.tmdb.org/t/p/w500'+ suggestedUser.poster_path;
+        imgEl.src = 'https://image.tmdb.org/t/p/w500'+ suggestedMovie.poster_path;
 
         var overviewEl = suggestionEl.querySelector('.overview');
-        overviewEl.textContent = suggestedUser.overview;
+        overviewEl.textContent = suggestedMovie.overview;
 
         var releaseEL = suggestionEl.querySelector('.release_date');
-        releaseEL.textContent = suggestedUser.release_date;
+        releaseEL.textContent = suggestedMovie.release_date;
 
         var voteEL = suggestionEl.querySelector('.vote_average');
-        voteEL.textContent = suggestedUser.vote_average+'/10';
+        voteEL.textContent = suggestedMovie.vote_average+'/10';
     }
 }
 
-suggestion1Stream.subscribe(function (suggestedUser) {
-    renderSuggestion(suggestedUser, '.suggestion1');
+suggestion1Stream.subscribe(function (suggestedMovie) {
+    renderSuggestion(suggestedMovie, '.suggestion1');
 });
 
-suggestion2Stream.subscribe(function (suggestedUser) {
-    renderSuggestion(suggestedUser, '.suggestion2');
+suggestion2Stream.subscribe(function (suggestedMovie) {
+    renderSuggestion(suggestedMovie, '.suggestion2');
 });
 
-suggestion3Stream.subscribe(function (suggestedUser) {
-    renderSuggestion(suggestedUser, '.suggestion3');
+suggestion3Stream.subscribe(function (suggestedMovie) {
+    renderSuggestion(suggestedMovie, '.suggestion3');
 });
