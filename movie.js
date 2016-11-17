@@ -15,7 +15,7 @@ var requestStream = refreshClickStream.startWith('startup click')
     .map(function(){
         var page = Math.floor(Math.random()*100)+1
         var randomOffset = Math.floor(Math.random()*20);
-        return 'http://api.themoviedb.org/3/discover/movie?api_key='+API_KEY+'&page='+page;
+        return 'https://api.themoviedb.org/3/discover/movie?api_key='+API_KEY+'&page='+page;
     })
 
 var responseStream = requestStream
@@ -56,7 +56,7 @@ function renderSuggestion(suggestedUser, selector) {
         usernameEl.textContent = suggestedUser.title;
         var imgEl = suggestionEl.querySelector('img');
         imgEl.src = "";
-        imgEl.src = 'http://image.tmdb.org/t/p/w500'+ suggestedUser.poster_path;
+        imgEl.src = 'https://image.tmdb.org/t/p/w500'+ suggestedUser.poster_path;
 
         var overviewEl = suggestionEl.querySelector('.overview');
         overviewEl.textContent = suggestedUser.overview;
