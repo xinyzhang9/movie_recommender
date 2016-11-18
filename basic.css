@@ -70,6 +70,7 @@ li .addToCart {
     bottom: 100px;
     left: 10px;
     font-weight: bolder;
+    color: blue;
 }
 li .close {
     display: inline-block;
@@ -77,6 +78,7 @@ li .close {
     bottom: 100px;
     left: 20px;
     font-weight: bolder;
+    color:red;
 }
 li .release_date {
     position: relative;
