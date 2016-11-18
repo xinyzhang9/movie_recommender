@@ -134,5 +134,7 @@ p{
     display: inline-block;
 }
 
-.remove_cart_element{
+.overview{
+    position: relative;
+    bottom: 10px;
 }

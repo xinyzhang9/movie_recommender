@@ -53,7 +53,6 @@ function initDropdown(){
 
         var x = document.createElement('a');
         x.textContent = 'X';
-        x.className = 'remove_cart_element';
         x.id = id;
         x.addEventListener('click',function(){
             // console.log(this.id);
