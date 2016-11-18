@@ -20,6 +20,7 @@ Storage.prototype.getObj = function(key) {
 
 // localStorage.setObj('movie_cart',[]);
 var cart;
+window.cart = cart;
 //init dropdown
 function initDropdown(){
     //initialize localstorage
@@ -28,7 +29,7 @@ function initDropdown(){
         cart = [];
         localStorage.setObj('movie_cart',[]);
     }
-    console.log(cart);
+    // console.log(cart);
 
     var myDropdown = document.getElementById('myDropdown');
     document.getElementById('drop_btn').textContent= 'Your Cart('+cart.length+')';
@@ -61,7 +62,7 @@ function initDropdown(){
                 return !c.startsWith(this_id.toString());
             })
             localStorage.setObj('movie_cart',newcart);
-            //re-render
+            //re-render dropdown
             initDropdown();
             return;
         })
@@ -135,11 +136,15 @@ function renderSuggestion(suggestedMovie, selector) {
         voteEL.textContent = suggestedMovie.vote_average+'/10';
 
         var addToCartEl = suggestionEl.querySelector('.addToCart');
+
+        // dirty way to solve the 'overlap-element' bug
+        addToCartEl.id = suggestedMovie.id+'#'+suggestedMovie.poster_path;
         addToCartEl.addEventListener("click", function(){
-            console.log(suggestedMovie.id);
-            if(cart.indexOf(suggestedMovie.id+'#'+suggestedMovie.poster_path) < 0){
-                cart.push(suggestedMovie.id+'#'+suggestedMovie.poster_path);
+            // console.log(suggestedMovie.id);
+            if(cart.indexOf(this.id) < 0){
+                cart.push(this.id);
                 localStorage.setObj('movie_cart',cart);
+                //re-render dropdown
                 initDropdown();
             }
         });
@@ -148,7 +153,6 @@ function renderSuggestion(suggestedMovie, selector) {
 
 suggestion1Stream.subscribe(function (suggestedMovie) {
     renderSuggestion(suggestedMovie, '.suggestion1');
-    console.log('stream 1',cart);
 });
 
 suggestion2Stream.subscribe(function (suggestedMovie) {
