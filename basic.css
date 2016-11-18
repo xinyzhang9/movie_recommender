@@ -27,6 +27,7 @@ body {
 h2 {
     font-weight: bold;
     display: inline-block;
+    font-size: 22px;
 }
 .refresh {
     margin-left: 10px;
@@ -62,6 +63,7 @@ li .moviename {
     position: relative;
     bottom: 100px;
     font-weight: bolder;
+    font-size: 18px;
 }
 li .addToCart {
     display: inline-block;
@@ -69,6 +71,7 @@ li .addToCart {
     bottom: 100px;
     left: 10px;
     font-weight: bolder;
+    font-size: 16px;
 }
 li .close {
     display: inline-block;
@@ -77,18 +80,21 @@ li .close {
     left: 20px;
     font-weight: bolder;
     color:red;
+    font-size: 16px;
 }
 li .release_date {
     position: relative;
     bottom: 90px;
     left: 90px;
     color:steelblue;
+    font-size: 16px;
 }
 li .vote_average {
     position: relative;
     bottom: 90px;
     left: 100px;
     color: orange;
+    font-size: 16px;
 }
 p{
     text-align: center;
@@ -137,6 +143,7 @@ p{
 .overview{
     position: relative;
     bottom: 10px;
+    font-size: 16px;
 }
 
 .addToCart:link {
