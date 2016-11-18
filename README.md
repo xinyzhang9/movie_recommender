@@ -7,7 +7,7 @@
 - [x] When user click 'x' button on one of the movie suggestion, it replaces with a new suggestion.
 - [x] When user click movie title, a new tab of movie homepage will show up.
 - [x] When user click 'add to cart' on one of the movie suggestions, the movie will be added to user's cart(collections) which is located on the right up corner of page.
-- [x] User's cart is saved in local storage(offline) so user can still access that when revisting page.
+- [x] User's cart is saved in local storage(offline) so user can still access that when revisiting page.
 
 ## Live
 https://xinyzhang9.github.io/movie_recommender/
