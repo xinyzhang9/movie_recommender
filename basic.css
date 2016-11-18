@@ -7,6 +7,7 @@ src: url("font/SourceSansPro-ExtraLight.otf");
 font-family: 'myFont';
 font-weight: bold;
 src: url("font/SourceSansPro-Semibold.otf");
+font-size: 100%;
 }
 
 a{
