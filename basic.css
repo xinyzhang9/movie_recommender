@@ -1,12 +1,12 @@
 @font-face {
 font-family: 'myFont';
-src: url("SourceSansPro-ExtraLight.otf");
+src: url("font/SourceSansPro-ExtraLight.otf");
 }
 
 @font-face {
 font-family: 'myFont';
 font-weight: bold;
-src: url("SourceSansPro-Semibold.otf");
+src: url("font/SourceSansPro-Semibold.otf");
 }
 
 a{
