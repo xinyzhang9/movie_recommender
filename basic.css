@@ -64,11 +64,18 @@ li .moviename {
     bottom: 100px;
     font-weight: bolder;
 }
-li .close {
+li .addToCart {
     display: inline-block;
     position: relative;
     bottom: 100px;
     left: 10px;
+    font-weight: bolder;
+}
+li .close {
+    display: inline-block;
+    position: relative;
+    bottom: 100px;
+    left: 20px;
     font-weight: bolder;
 }
 li .release_date {
@@ -87,4 +94,45 @@ p{
     text-align: center;
 }
 
+.dropbtn {
+    background-color: brown;
+    color: white;
+}
 
+.dropbtn:hover, .dropbtn:focus {
+    background-color: orange;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    float: right;
+}
+
+.dropdown-content {
+    text-align: center;
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    overflow: auto;
+    box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.2);
+    right:0;
+}
+
+.dropdown-content a {
+    color: red;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown a:hover {background-color: skyblue}
+
+.show {display:block;}
+
+.dropdown-content img{
+    width: 60px;
+    display: inline-block;
+}
+
+.remove_cart_element{
+}

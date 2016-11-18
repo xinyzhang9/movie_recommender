@@ -5,7 +5,13 @@
         
     </head>
     <body>
+        
         <div class="container">
+            <div class="dropdown">
+                <button onclick="dropFunction()" class="dropbtn" id = 'drop_btn'>Your Cart</button>
+                  <div id="myDropdown" class="dropdown-content">
+                  </div>
+            </div>
             <div class="header">
                  <h2>Movies you may like</h2><a href="#" class="refresh">&#10226</a>
             </div>
@@ -13,6 +19,7 @@
                 <li class="suggestion1">
                     <img />
                     <a href="#" target="_blank" class="moviename">this will not be displayed</a>
+                    <a href = '#' class = 'addToCart'>add to cart</a>
                     <a href="#" class="close close1">&#10060</a>
                     <br>
                     <span class = 'release_date'></span><span class = 'vote_average'></span>
@@ -23,6 +30,7 @@
                 <li class="suggestion2">
                     <img />
                     <a href="#" target="_blank" class="moviename">neither this</a>
+                    <a href = '#' class = 'addToCart'>add to cart</a>
                     <a href="#" class="close close2">&#10060</a>
                     <br>
                     <span class = 'release_date'></span><span class = 'vote_average'></span>
@@ -32,6 +40,7 @@
                 <li class="suggestion3">
                     <img />
                     <a href="#" target="_blank" class="moviename">nor this</a>
+                    <a href = '#' class = 'addToCart'>add to cart</a>
                     <a href="#" class="close close3">&#10060</a>
                     <br>
                     <span class = 'release_date'></span><span class = 'vote_average'></span>
